@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f3f0e9" />
+    <meta name="description" content="Chasy P is a local-first peer-to-peer chat for people you choose." />
+    <title>Chasy P</title>
+    <link rel="icon" type="image/x-icon" href="favicon-light.ico" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/x-icon" href="favicon-dark.ico" media="(prefers-color-scheme: dark)">
+    <style>
+      html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #f3f0e9; }
+      @media (prefers-color-scheme: dark) { html, body { background: #101318; } }
+      #root { width: 100%; height: 100%; }
+      #chsyp-frame { display: block; width: 100%; height: 100dvh; border: 0; background: transparent; color-scheme: light dark; }
+      #chsyp-frame[hidden] { display: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <iframe
+      id="chsyp-frame"
+      title="Chasy P peer-to-peer chat"
+      sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-downloads allow-popups allow-popups-to-escape-sandbox"
+      allow="clipboard-write; clipboard-read"
+      hidden
+    ></iframe>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
